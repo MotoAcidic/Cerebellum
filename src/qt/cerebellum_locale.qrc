@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/cerebellum_bg.qm</file>
+        <file alias="ca">locale/cerebellum_ca.qm</file>
+        <file alias="cs">locale/cerebellum_cs.qm</file>
+        <file alias="da">locale/cerebellum_da.qm</file>
+        <file alias="de">locale/cerebellum_de.qm</file>
+        <file alias="en">locale/cerebellum_en.qm</file>
+        <file alias="en_GB">locale/cerebellum_en_GB.qm</file>
+        <file alias="en_US">locale/cerebellum_en_US.qm</file>
+        <file alias="eo">locale/cerebellum_eo.qm</file>
+        <file alias="es">locale/cerebellum_es.qm</file>
+        <file alias="es_ES">locale/cerebellum_es_ES.qm</file>
+        <file alias="fi">locale/cerebellum_fi.qm</file>
+        <file alias="fr_FR">locale/cerebellum_fr_FR.qm</file>
+        <file alias="hi_IN">locale/cerebellum_hi_IN.qm</file>
+        <file alias="hr">locale/cerebellum_hr.qm</file>
+        <file alias="hr_HR">locale/cerebellum_hr_HR.qm</file>
+        <file alias="it">locale/cerebellum_it.qm</file>
+        <file alias="ja">locale/cerebellum_ja.qm</file>
+        <file alias="ko_KR">locale/cerebellum_ko_KR.qm</file>
+        <file alias="lt_LT">locale/cerebellum_lt_LT.qm</file>
+        <file alias="nl">locale/cerebellum_nl.qm</file>
+        <file alias="pl">locale/cerebellum_pl.qm</file>
+        <file alias="pt">locale/cerebellum_pt.qm</file>
+        <file alias="pt_BR">locale/cerebellum_pt_BR.qm</file>
+        <file alias="ro_RO">locale/cerebellum_ro_RO.qm</file>
+        <file alias="ru">locale/cerebellum_ru.qm</file>
+        <file alias="sk">locale/cerebellum_sk.qm</file>
+        <file alias="sv">locale/cerebellum_sv.qm</file>
+        <file alias="tr">locale/cerebellum_tr.qm</file>
+        <file alias="uk">locale/cerebellum_uk.qm</file>
+        <file alias="vi">locale/cerebellum_vi.qm</file>
+        <file alias="zh_CN">locale/cerebellum_zh_CN.qm</file>
+        <file alias="zh_TW">locale/cerebellum_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,81 @@
+policy_module(cerebellum, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type cerebellum_t;
+type cerebellum_exec_t;
+init_daemon_domain(cerebellum_t, cerebellum_exec_t)
+
+permissive cerebellum_t;
+
+type cerebellum_initrc_exec_t;
+init_script_file(cerebellum_initrc_exec_t)
+
+type cerebellum_conf_t;
+files_type(cerebellum_conf_t)
+
+type cerebellum_var_lib_t;
+files_type(cerebellum_var_lib_t)
+
+type cerebellum_var_run_t;
+files_type(cerebellum_var_run_t)
+
+type cerebellum_port_t;
+corenet_port(cerebellum_port_t)
+
+########################################
+#
+# cerebellum local policy
+#
+allow cerebellum_t self:process { fork };
+
+allow cerebellum_t self:fifo_file rw_fifo_file_perms;
+allow cerebellum_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(cerebellum_t, cerebellum_conf_t, cerebellum_conf_t)
+manage_files_pattern(cerebellum_t, cerebellum_conf_t, cerebellum_conf_t)
+
+manage_dirs_pattern(cerebellum_t, cerebellum_var_lib_t, cerebellum_var_lib_t)
+manage_files_pattern(cerebellum_t, cerebellum_var_lib_t, cerebellum_var_lib_t)
+files_var_lib_filetrans(cerebellum_t, cerebellum_var_lib_t, { dir file })
+
+manage_dirs_pattern(cerebellum_t, cerebellum_var_run_t, cerebellum_var_run_t)
+manage_files_pattern(cerebellum_t, cerebellum_var_run_t, cerebellum_var_run_t)
+
+sysnet_dns_name_resolve(cerebellum_t)
+corenet_all_recvfrom_unlabeled(cerebellum_t)
+
+allow cerebellum_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(cerebellum_t)
+corenet_tcp_sendrecv_generic_node(cerebellum_t)
+corenet_tcp_sendrecv_all_ports(cerebellum_t)
+corenet_tcp_bind_generic_node(cerebellum_t)
+
+gen_require(`
+    type cerebellum_port_t;
+')
+allow cerebellum_t cerebellum_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type cerebellum_port_t;
+')
+allow cerebellum_t cerebellum_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(cerebellum_t)
+
+files_read_etc_files(cerebellum_t)
+
+miscfiles_read_localization(cerebellum_t)
+
+sysnet_dns_name_resolve(cerebellum_t)
+
+allow cerebellum_t cerebellum_exec_t:file execute_no_trans;
+allow cerebellum_t self:process setsched;
+corecmd_exec_ls(cerebellum_t)
+corenet_tcp_connect_http_port(cerebellum_t)
+dev_read_urand(cerebellum_t)
+fs_getattr_xattr_fs(cerebellum_t)
+kernel_read_system_state(cerebellum_t)

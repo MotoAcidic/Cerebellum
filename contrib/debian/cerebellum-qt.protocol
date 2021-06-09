@@ -1,0 +1,11 @@
+[Protocol]
+exec=cerebellum-qt '%u'
+protocol=cerebellum
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

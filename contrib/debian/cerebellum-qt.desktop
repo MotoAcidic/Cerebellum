@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Cerebellum Core
+Comment=cerebellum P2P Cryptocurrency
+Comment[fr]=cerebellum, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=cerebellum, eşten eşe kriptografik sanal para birimi
+Exec=cerebellum-qt %u
+Terminal=false
+Type=Application
+Icon=cerebellum128
+MimeType=x-scheme-handler/cerebellum;
+Categories=Office;Finance;
+StartupWMClass=cerebellum-qt

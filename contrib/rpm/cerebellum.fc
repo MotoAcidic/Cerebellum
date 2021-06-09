@@ -1,0 +1,8 @@
+/usr/bin/cerebellum-cli		--	gen_context(system_u:object_r:cerebellum_exec_t,s0)
+/usr/sbin/cerebellumd		--	gen_context(system_u:object_r:cerebellum_exec_t,s0)
+/usr/lib(64)?/cerebellum/cerebellumd		--	gen_context(system_u:object_r:cerebellum_exec_t,s0)
+
+/etc/cerebellum(/.*)?		gen_context(system_u:object_r:cerebellum_conf_t,s0)
+/var/lib/cerebellum(/.*)?		gen_context(system_u:object_r:cerebellum_var_lib_t,s0)
+
+(/var)?/run/cerebellumd(/.*)?   gen_context(system_u:object_r:cerebellum_var_run_t,s0)

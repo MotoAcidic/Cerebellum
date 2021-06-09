@@ -1,0 +1,6 @@
+usr/local/bin/cerebellum-qt usr/bin
+share/pixmaps/cerebellum32.xpm usr/share/pixmaps
+share/pixmaps/cerebellum16.xpm usr/share/pixmaps
+share/pixmaps/cerebellum128.png usr/share/pixmaps
+debian/cerebellum-qt.desktop usr/share/applications
+debian/cerebellum-qt.protocol usr/share/kde4/services/
